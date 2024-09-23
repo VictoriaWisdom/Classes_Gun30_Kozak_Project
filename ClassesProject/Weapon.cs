@@ -8,6 +8,7 @@ namespace ClassesProject
 {
       public class Weapon
     {
+        private float _damage;
         public string Name { get;}
 
         public float MinDamage { get; private set; }

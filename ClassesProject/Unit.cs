@@ -9,23 +9,29 @@ namespace ClassesProject
 {
     public class Unit
     {
+        private string name;
         private float _health;
         private float _armor;
         private float _helm;
-        private float _damage;
-
+        private float realHealth;
+        
         public string Name { get; }
         public float Health => _health;
 
 
 
-        public Unit() : this("Unknown Unit", 10)
+        public Unit ()
+        {
+            this.name = "Unknown Unit";
+        }
+        public Unit(string name) : this (name, 10f)
         {
         }
-        public Unit(string name, float health)
+        public Unit (string name, float health, float value)
         {
-            Name = name;
-            _health = health;
+            this.name = name;
+            this. _health = health;
+            this._armor = value;
         }
         public float RealHealth()
         {
@@ -43,7 +49,7 @@ namespace ClassesProject
                 else { }
             }
         }
-        public bool SetDamage(float value)
+        public bool SetDamage (float value)
         {
             _health = _health - value * _armor;
             if (_health < 0)
