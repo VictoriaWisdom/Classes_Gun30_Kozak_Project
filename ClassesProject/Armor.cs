@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 
 namespace ClassesProject
 {
-    public class Armoer
-    {
+    
         public class Helm
-        {
-            string name = "Helm";
+        { 
             float armor = 0f;
             public string Name { get; }
             public float Armor
@@ -19,6 +17,7 @@ namespace ClassesProject
                 get => armor;
                 set
                 {
+                Console.WriteLine("Броня не может быть меньше 0");
                     armor = value;
                     if (armor < 0)
                     {
@@ -26,7 +25,8 @@ namespace ClassesProject
                     }
                     else if (armor > 1)
                     {
-                        armor = 1;
+                    Console.WriteLine("");
+                    armor = 1;
                     }
                 }
             }
@@ -104,5 +104,5 @@ namespace ClassesProject
             }
         }
     }
-}
+
 
