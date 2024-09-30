@@ -38,14 +38,13 @@ namespace ClassesProject
         {
             this.name = "Unknown Unit";
         }
-        public Unit(string name) : this (name, 10f, )
+        public Unit(string name) : this (name, 10f)
         {
         }
-        public Unit (string name, float health, float value)
+        public Unit (string name, float health)
         {
             this.name = name;
             this. _health = health;
-            this._armor = value;
         }
         public float RealHealth()
         {
